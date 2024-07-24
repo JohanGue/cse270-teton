@@ -43,7 +43,7 @@ class TestSmokeTest():
     actions.move_to_element(element).perform()
     assert self.driver.find_element(By.CSS_SELECTOR, ".gold-member:nth-child(9) > p:nth-child(2)").text == "Teton Turf and Tree"
   
-  def test_joinPage(self):
+  def test_joinPage(self): 
     self.driver.get("http://127.0.0.1:5500/teton/1.6/join.html")
     WebDriverWait(self.driver, 30).until(expected_conditions.presence_of_element_located((By.NAME, "fname")))
     self.driver.find_element(By.NAME, "fname").send_keys("Johan ")
